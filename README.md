@@ -2,14 +2,14 @@
 
 Backend service dan dashboard interaktif untuk melakukan ingestion, pencarian, serta analisis statistik data media mentions.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **Backend:** FastAPI (Python 3.10+)
 - **Database:** PostgreSQL (Cloud via Supabase)
 - **ORM:** SQLAlchemy
 - **Frontend / Dashboard:** Streamlit
 - **Data Processing:** Python-dateutil, Pandas
 
-## 🚀 Fitur Utama
+##  Fitur Utama
 1. **Bulk Ingestion (`POST /internal/mentions/bulk`)**
    - **Data Cleaning:** Menghapus tag HTML pada `content`/`title`, normalisasi nama `source` menjadi lowercase, serta parsing datetime ISO.
    - **Idempotency:** Menggunakan constraint `UNIQUE` pada kolom `url` (`ON CONFLICT DO NOTHING`) sehingga eksekusi berulang tidak memicu duplikasi data.
@@ -21,7 +21,7 @@ Backend service dan dashboard interaktif untuk melakukan ingestion, pencarian, s
 4. **Interactive Dashboard**
    - Visualisasi grafis breakdown data dan pencarian interaktif menggunakan Streamlit.
 
-## 📦 Cara Menjalankan Project
+##  Cara Menjalankan Project
 
 1. **Aktifkan Virtual Environment & Install Dependencies:**
    ```bash
@@ -35,3 +35,13 @@ Backend service dan dashboard interaktif untuk melakukan ingestion, pencarian, s
 3. **Jalankan Dashboard Streamlit:**
   streamlit run streamlit_app.py
   Akses Dashboard di: http://localhost:8501
+
+  ##  Application Screenshots
+
+### FastAPI Documentation (Swagger UI)
+![Swagger UI](assets/swagger-demo.png)
+
+### Streamlit Interactive Dashboard
+![Streamlit Dashboard 1](assets/streamlit1-demo.png)
+![Streamlit Dashboard 2](assets/streamlit2-demo.png)
+![Streamlit Dashboard 3](assets/streamlit2-demo.png)
